@@ -1,0 +1,30 @@
+
+// Importing variables and mixins from the helper folder
+// The 'as *' syntax allows us to use their content directly without prefixes
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    @include prefexer(box-sizing, border-box, o ms);
+    // Ensures consistent box-sizing across browsers (includes vendor prefixes like 'o' for Opera and 'ms' for Microsoft)
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+    // Sets base font size to 10px (62.5% of 16px default), making rem calculation easier (1rem = 10px | 2rem = 20px | 2.4rem = 24px & 3.2rem = 32px & ...)
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: $black-color;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}

@@ -1,0 +1,22 @@
+
+// ** Media Queries **
+// Define breakpoints for responsive design
+$sm-media: 600px; // Small devices (e.g., mobile phones)
+$md-media: 900px; // Medium devices (e.g., tablets)
+$lg-media: 1200px; // Large devices (e.g., laptops and desktops)
+
+// ** Colors **
+// Define commonly used colors for the project
+$black-color: #101010; // Black color for text or backgrounds
+$white-color: #ffffff; // White color for text or backgrounds
+$primary-color: #f2545f; // Primary brand color (e.g., buttons or highlights)
+$secondary-color: #66ccff; // Secondary brand color (e.g., links or accents)
+$gray-color: #707070; // Neutral gray color for text or borders
+$border-color: #dddddd; // Light gray color for borders or dividers
+
+// ** Radius **
+// Define border-radius values for rounded corners
+$sm-radius: 4px; // Small radius for slightly rounded elements
+$md-radius: 9px; // Medium radius for moderately rounded elements
+$lg-radius: 11px; // Large radius for more rounded elements
+$rounded: 50%; // Fully rounded (e.g., for circular shapes like avatars)

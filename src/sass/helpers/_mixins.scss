@@ -1,0 +1,16 @@
+
+// ** Mixin: Prefexer **
+// This mixin generates CSS properties with vendor prefixes for better browser compatibility.
+// Parameters:
+// - $property: The CSS property to apply (e.g., "transform", "box-shadow").
+// - $value: The value of the CSS property (e.g., "rotate(45deg)", "10px 10px").
+// - $prefixes: A list of vendor prefixes to use (e.g., ("-webkit", "-moz")).
+@mixin prefexer($property, $value, $prefixes) {
+    // Loop through each prefix provided in the $prefixes list
+    @each $prefix in $prefixes {
+        // Add the prefixed version of the CSS property
+        -#{$prefix}-#{$property}: $value;
+    }
+    // Add the standard (non-prefixed) version of the CSS property
+    #{$property}: $value;
+}

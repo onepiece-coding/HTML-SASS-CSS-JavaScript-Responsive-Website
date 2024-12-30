@@ -1,2 +1,5 @@
 
 @use "./layout/global";
+
+// Import the navbar styles for usage in the main stylesheet
+@use "./layout/navbar";

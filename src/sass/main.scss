@@ -1,5 +1,9 @@
 
 @use "./layout/global";
 
+@use "./components/buttons";
+
 // Import the navbar styles for usage in the main stylesheet
 @use "./layout/navbar";
+
+@use "./layout/hero";

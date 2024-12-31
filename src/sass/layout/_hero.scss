@@ -1,0 +1,116 @@
+
+@use "../helpers/variables" as *;
+
+.hero-section {
+    min-height: 100vh;
+    padding: 1.6rem 1.6rem;
+    background: {
+        image: url("../images/hero-bg.jpg");
+        position: 50% 0;
+        size: cover;
+        repeat: no-repeat;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: $lg-media) {
+        padding: 1.6rem 6.4rem;
+    }
+
+    .hero-section__content {
+        text-align: center;
+
+        .hero-section__description,
+        .hero-section__title {
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            line-height: 1;
+            color: $white-color;
+        }
+
+        .hero-section__description {
+            margin-bottom: 2.4rem;
+            font-size: 2rem;
+            animation: bounce 1s ease;
+            @media screen and (min-width: $sm-media) {
+                font-size: 2.4rem;
+            }
+            @media screen and (min-width: $md-media) {
+                font-size: 3.2rem;
+            }
+            @media screen and (min-width: $lg-media) {
+                font-size: 2.6rem;
+            }
+        }
+
+        .hero-section__title {
+            font-size: 3rem;
+            transform: translateY(3rem);
+            opacity: 0;
+            animation: fadeInUp 1s 1s ease forwards;
+            @media screen and (min-width: $sm-media) {
+                font-size: 3.2rem;
+            }
+            @media screen and (min-width: $md-media) {
+                font-size: 3.6rem;
+            }
+            @media screen and (min-width: $lg-media) {
+                font-size: 4.8rem;
+            }
+        }
+
+        .hero-section__cta {
+            margin: 3.6rem auto 0;
+            width: calc(300px + 1.6rem);
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(3rem);
+            opacity: 0;
+            animation: fadeInUp 1s 2s ease forwards;
+            .btn {
+                &.btn-outline {
+                    border-color: $white-color;
+                    @media screen and (hover: hover) {
+                        &:hover {
+                            background-color: $white-color;
+                            color: $black-color;
+                        }
+                    }
+                }
+                &.btn-fill {
+                    background-color: $primary-color;
+                    @media screen and (hover: hover) {
+                        &:hover {
+                            background-color: transparent;
+                            border-color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(-30px);
+        opacity: 0.6;
+    }
+    60% {
+        transform: translateY(-15px);
+        opacity: 0.8;
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,9 @@
+
+# Navbar Content
+- Logo : One Piece Coding
+- Navbar Links : Intro | Overview | Speakers | Programs | Register | Venue | Sponsors | Contact
+
+# Call To Action ( Hero ) Content
+- Description: July 22 - 26 in San Francisco, CA 
+- Title: Web Design Conference
+- Links: Learn More | Register Now

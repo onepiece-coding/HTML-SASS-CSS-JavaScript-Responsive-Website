@@ -1,0 +1,55 @@
+
+@use "../helpers/variables" as *;
+
+.overview-section {
+    padding: 6.4rem 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3.2rem;
+
+    @media screen and (min-width: $lg-media) {
+        padding: 6.4rem 6.4rem;
+    }
+
+    .overview-section__text {
+        width: 100%;
+
+        @media screen and (min-width: $md-media) {
+            width: calc(50% - 1.6rem);
+        }
+
+        .overview-section__title {
+            margin-bottom: 1.6rem;
+            font: {
+                size: 2rem;
+                weight: 500;
+            }
+            line-height: 36px;
+            letter-spacing: 0.5px;
+            @media screen and (min-width: $lg-media) {
+                font-size: 2.4rem;
+            }
+        }
+
+        .overview-section__description {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            letter-spacing: 0.5px;
+            &:first-of-type {
+                margin-bottom: 1.6rem;
+            }
+        }
+    }
+
+    .overview-section__image {
+        display: flex;
+        width: 100%;
+        @media screen and (min-width: $md-media) {
+            width: calc(50% - 1.6rem);
+        }
+        img {
+            width: 100%;
+        }
+    }
+}

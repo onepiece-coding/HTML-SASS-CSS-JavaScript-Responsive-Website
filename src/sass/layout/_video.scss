@@ -1,0 +1,51 @@
+
+@use "../helpers/variables" as *;
+
+.video-section {
+    padding: 6.4rem 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+
+    @media screen and (min-width: $lg-media) {
+        padding: 6.4rem 6.4rem;
+    }
+
+    .video-section__text {
+        @media screen and (min-width: $md-media) {
+            width: calc(50% - 1.6rem);
+        }
+        .video-section__title {
+            margin-bottom: 1.6rem;
+            font-size: 3rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+
+        .video-section__subtitle {
+            margin-bottom: 1.6rem;
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            line-height: 36px;
+        }
+
+        .video-section__description {
+            font-size: 1.4rem;
+            line-height: 1.8;
+        }
+    }
+
+    .video-section__video {
+        display: flex;
+        @media screen and (min-width: $md-media) {
+            width: calc(50% - 1.6rem);
+        }
+        video {
+            width: 100%;
+        }
+    }
+}
